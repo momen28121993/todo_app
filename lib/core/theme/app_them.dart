@@ -9,6 +9,7 @@ class AppTheme {
   static final ThemeData appTheme = ThemeData(
     //scaffoldBackgroundColor: AppColor.scaffoldBackGround,
     brightness: Brightness.dark,
+    fontFamily: "Poppins",
     appBarTheme:AppBarTheme(
       titleTextStyle: TextStyle(color: AppColor.white , fontSize: AppFontSize.s25.sp),
       centerTitle: true,

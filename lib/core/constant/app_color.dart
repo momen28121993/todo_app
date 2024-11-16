@@ -24,6 +24,7 @@ class AppColor {
   static  Color error =const Color(0xffE61F34) ;
   static Color red = const Color(0xffe74040);  //red
   static Color green = const Color(0xff0ae734);  //red
+  static Color orange = const Color(0xf5e7800a);
   static Color blue = const Color(0xff0c3cd0);  //red
 
 
