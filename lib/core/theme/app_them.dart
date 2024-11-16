@@ -10,6 +10,9 @@ class AppTheme {
     //scaffoldBackgroundColor: AppColor.scaffoldBackGround,
     brightness: Brightness.dark,
     fontFamily: "Poppins",
+    floatingActionButtonTheme: FloatingActionButtonThemeData(
+      backgroundColor: AppColor.black
+    ),
     appBarTheme:AppBarTheme(
       titleTextStyle: TextStyle(color: AppColor.white , fontSize: AppFontSize.s25.sp),
       centerTitle: true,

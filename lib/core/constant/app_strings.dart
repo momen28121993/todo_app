@@ -18,6 +18,9 @@ class AppStrings {
 
   ///= =====================  home screen ==============
   static const String todoList = "Todo list";
+  static const String title = "Title";
+  static const String details = "Details";
+  static const String add = "Add";
 
 
 

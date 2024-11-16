@@ -23,8 +23,8 @@ class TodoItem extends StatelessWidget {
             leading: Checkbox(value: true , onChanged: (value){} ,activeColor: AppColor.green,fillColor:  WidgetStateProperty.all(AppColor.white),),
             title: Text("note title" ,style: TextStyle(color: AppColor.black ,fontSize: AppFontSize.s20),),
             subtitle: Padding(
-              padding: const EdgeInsets.only(top: AppPadding.pad18),
-              child: Text("sub title the descriptions of the note we should give ",style: TextStyle(color: AppColor.black.withOpacity(.6),fontSize: AppFontSize.s14)),
+              padding: const EdgeInsets.only(top: AppPadding.pad8),
+              child: Text("sub title the descriptions of the note we should give ",style: TextStyle(color: AppColor.black.withOpacity(.6),fontSize: AppFontSize.s16)),
             ),
             trailing: IconButton(onPressed: (){}, icon:  Icon(Icons.delete , color: AppColor.black,)),
             enabled: true,
