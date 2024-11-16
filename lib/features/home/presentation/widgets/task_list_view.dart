@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_scroll_shadow/flutter_scroll_shadow.dart';
 import 'package:todo_app/core/constant/app_color.dart';
-import 'package:todo_app/home/presentation/widgets/todo_item.dart';
+import 'package:todo_app/features/home/presentation/widgets/todo_item.dart';
 
-import '../../../core/constant/app_dimension.dart';
+import '../../../../core/constant/app_dimension.dart';
 
 class TasksListView extends StatelessWidget {
   const TasksListView({super.key});

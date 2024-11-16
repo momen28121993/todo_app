@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app/core/constant/app_strings.dart';
 
-import '../../../core/constant/app_color.dart';
-import '../../../core/constant/app_dimension.dart';
+import '../../../../core/constant/app_color.dart';
+import '../../../../core/constant/app_dimension.dart';
+
 
 class CustomTextField extends StatelessWidget {
   final String hint;

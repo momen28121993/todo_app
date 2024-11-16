@@ -2,7 +2,8 @@
 import 'package:get/get.dart';
 
 import 'core/constant/app_routes_name.dart';
-import 'home/presentation/screens/home_screen.dart';
+import 'features/edit_task/view/screens/edit_task_screen.dart';
+import 'features/home/presentation/screens/home_screen.dart';
 
 List<GetPage<dynamic>> route = [
 
@@ -12,6 +13,7 @@ List<GetPage<dynamic>> route = [
 
   /// home route
   GetPage(name: "/" , page: () => const HomeScreen() , transition: Transition.fadeIn,transitionDuration: const Duration(milliseconds: 900)),
+  GetPage(name: AppRoutesNames.editTaskScreen , page: () => const EditTaskScreen() , transition: Transition.rightToLeft,transitionDuration: const Duration(milliseconds: 350)),
 
 ];
 

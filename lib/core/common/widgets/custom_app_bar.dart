@@ -8,18 +8,21 @@ import 'custom_search_button.dart';
 
 class CustomAppBar extends StatelessWidget {
   final void Function()? onPressed ;
-  const CustomAppBar({super.key,required this.onPressed});
+  final String title;
+  final IconData icon;
+  const CustomAppBar({super.key,required this.onPressed, required this.title, required this.icon});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-         Text(AppStrings.todoList , style: TextStyle(
+         Text(title , style: TextStyle(
            fontSize: AppFontSize.s25,
          ),),
          CustomSearchButton(
           onPressed: onPressed,
+           icon: icon,
         )
       ],
     );

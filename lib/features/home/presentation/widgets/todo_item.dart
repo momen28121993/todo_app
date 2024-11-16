@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-import '../../../core/constant/app_color.dart';
-import '../../../core/constant/app_dimension.dart';
-import '../../../core/constant/app_font.dart';
+import '../../../../core/constant/app_color.dart';
+import '../../../../core/constant/app_dimension.dart';
+import '../../../../core/constant/app_font.dart';
+import '../../../../core/constant/app_routes_name.dart';
+
 
 class TodoItem extends StatelessWidget {
   const TodoItem({super.key});
@@ -19,6 +22,9 @@ class TodoItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           ListTile(
+            onTap: (){
+              Get.toNamed(AppRoutesNames.editTaskScreen);
+            },
             contentPadding: const EdgeInsets.symmetric(horizontal: AppPadding.pad3).add(const EdgeInsets.only(top: AppPadding.pad20)),
             leading: Checkbox(value: true , onChanged: (value){} ,activeColor: AppColor.green,fillColor:  WidgetStateProperty.all(AppColor.white),),
             title: Text("note title" ,style: TextStyle(color: AppColor.black ,fontSize: AppFontSize.s20),),

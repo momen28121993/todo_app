@@ -21,6 +21,7 @@ class AppStrings {
   static const String title = "Title";
   static const String details = "Details";
   static const String add = "Add";
+  static const String editTask = "Edit Task";
 
 
 

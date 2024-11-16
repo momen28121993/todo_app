@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:todo_app/home/controller/home_controller_impl.dart';
-
-import '../../../core/constant/app_dimension.dart';
+import '../../../../core/constant/app_dimension.dart';
 import '../widgets/add_task_bottom_sheet.dart';
 import '../widgets/todo_list_body.dart';
 
@@ -12,7 +10,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: true,
+      resizeToAvoidBottomInset: false,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           openBottomSheet();

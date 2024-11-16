@@ -5,8 +5,9 @@ import '../../constant/app_dimension.dart';
 
 class CustomSearchButton extends StatelessWidget {
   final void Function()? onPressed;
+  final IconData icon ;
   const CustomSearchButton({
-    super.key, this.onPressed,
+    super.key, this.onPressed, required this.icon,
   });
 
   @override
@@ -16,6 +17,6 @@ class CustomSearchButton extends StatelessWidget {
           backgroundColor: WidgetStateProperty.all(AppColor.grey.withOpacity(.2)),
           shape: WidgetStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppSize.s16))),
         ),
-        onPressed: onPressed, icon: const Icon(Icons.search_outlined,size: AppSize.s28,));
+        onPressed: onPressed, icon:  Icon(icon,size: AppSize.s28,));
   }
 }
