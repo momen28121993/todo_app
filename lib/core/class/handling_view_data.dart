@@ -18,16 +18,8 @@ class HandlingViewData extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return requestStatus == RequestStatus.loading
-        ? Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Center(
-                  child: Lottie.asset(ImageAssets.loading,
-                      width: 200.w, height: 200.h)),
-              const Center(child: Text(AppStrings.loading)),
-            ],
-          )
+        ? Center(
+            child: Lottie.asset(ImageAssets.loading,))
         : requestStatus == RequestStatus.offline
             ? Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -36,10 +28,10 @@ class HandlingViewData extends StatelessWidget {
                   Center(
                       child: Lottie.asset(ImageAssets.empty,
                           width: 200.w, height: 200.h)),
-                   Center(
+                   const Center(
                       child: Text(
-                    AppStrings.youAreOffline.tr,
-                    style: const TextStyle(fontSize: 20),
+                    AppStrings.youAreOffline,
+                    style: TextStyle(fontSize: 20),
                   )),
                 ],
               )
@@ -51,28 +43,30 @@ class HandlingViewData extends StatelessWidget {
                       Center(
                           child: Lottie.asset(ImageAssets.error,
                               width: 200.w, height: 200.h)),
-                       Center(
+                       const Center(
                           child: Text(
-                        AppStrings.serverError.tr,
-                        style: const TextStyle(fontSize: 20),
+                        AppStrings.serverError,
+                        style: TextStyle(fontSize: 20),
                       )),
                     ],
                   )
                 : requestStatus == RequestStatus.failed
-                    ? Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Center(
-                              child: Lottie.asset(ImageAssets.empty,
-                                  width: 200.w, height: 200.h)),
-                           Center(
-                              child: Text(
-                            AppStrings.noData.tr,
-                            style: const TextStyle(fontSize: 20),
-                          )),
-                        ],
-                      )
+                    ? Padding(
+                      padding: const EdgeInsets.all(20),
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Center(
+                                child: Lottie.asset(ImageAssets.error,)),
+                             const Center(
+                                child: Text(
+                              AppStrings.tryAgain,
+                              style: TextStyle(fontSize: 20),
+                            )),
+                          ],
+                        ),
+                    )
                     : requestStatus == RequestStatus.noInternet
                         ? Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -81,10 +75,10 @@ class HandlingViewData extends StatelessWidget {
                               Center(
                                   child: Lottie.asset(ImageAssets.error,
                                       width: 200.w, height: 200.h)),
-                               Center(
+                               const Center(
                                   child: Text(
-                                AppStrings.noInternet.tr,
-                                style: const TextStyle(fontSize: 20),
+                                AppStrings.noInternet,
+                                style: TextStyle(fontSize: 20),
                               )),
                             ],
                           )

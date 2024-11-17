@@ -15,6 +15,9 @@ class AppStrings {
   static const String noInternet = "No Internet";
   static const String youAreOffline = "You are offline";
   static const String noItems = "No Items";
+  static const String tryAgain = "error happen please Try Again";
+  static const String valueCannotBeLessThan = "value can not be less than";
+  static const String valueCannotBeMoreThan = "value can not be more than";
 
   ///= =====================  home screen ==============
   static const String todoList = "Todo list";
@@ -22,6 +25,7 @@ class AppStrings {
   static const String details = "Details";
   static const String add = "Add";
   static const String editTask = "Edit Task";
+  static const String task = "task";
 
 
 
