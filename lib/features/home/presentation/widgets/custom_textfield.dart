@@ -6,6 +6,7 @@ import '../../../../core/constant/app_dimension.dart';
 class CustomTextField extends StatelessWidget {
   final String hint;
   final int maxLines;
+  final TextEditingController? controller;
   final void Function(String?)? onSaved;
   final String? Function(String?)? validator;
   const CustomTextField(
@@ -13,11 +14,13 @@ class CustomTextField extends StatelessWidget {
       required this.hint,
       required this.maxLines,
       this.onSaved,
-      this.validator});
+      this.validator,
+        this.controller});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controller,
       onSaved: onSaved,
       validator: validator,
       cursorColor: AppColor.primary,

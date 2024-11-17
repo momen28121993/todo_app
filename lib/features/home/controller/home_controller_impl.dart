@@ -7,6 +7,7 @@ import 'home_controller.dart';
 class HomeControllerImpl extends HomeController {
   RequestStatus requestStatus = RequestStatus.none;
 
+
   var taskBox = Hive.box<TaskModel>(AppStrings.task);
   List<TaskModel> tasks = [];
 
