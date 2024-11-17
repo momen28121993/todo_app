@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:todo_app/models/task_model.dart';
 
 import '../../../../core/constant/app_color.dart';
 import '../../../../core/constant/app_dimension.dart';
 import '../../../../core/constant/app_font.dart';
-import '../../../../core/constant/app_routes_name.dart';
 
 class TodoItem extends StatelessWidget {
   final TaskModel task;
@@ -31,7 +29,7 @@ class TodoItem extends StatelessWidget {
         children: [
           ListTile(
             onTap: () {
-              Get.toNamed(AppRoutesNames.editTaskScreen);
+             // Get.toNamed(AppRoutesNames.editTaskScreen);
             },
             contentPadding:
                 const EdgeInsets.symmetric(horizontal: AppPadding.pad3)

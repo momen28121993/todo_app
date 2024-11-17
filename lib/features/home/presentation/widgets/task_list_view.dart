@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_scroll_shadow/flutter_scroll_shadow.dart';
 import 'package:get/get.dart';
+import 'package:lottie/lottie.dart';
 import 'package:todo_app/core/class/handling_view_data.dart';
 import 'package:todo_app/core/constant/app_color.dart';
 import 'package:todo_app/features/home/controller/home_controller_impl.dart';
 import 'package:todo_app/features/home/presentation/widgets/todo_item.dart';
 
 import '../../../../core/constant/app_dimension.dart';
+import '../../../../core/constant/image_assets.dart';
 
 class TasksListView extends StatelessWidget {
   const TasksListView({super.key});
@@ -18,7 +20,9 @@ class TasksListView extends StatelessWidget {
       builder: (controller) {
         return Padding(
           padding: const EdgeInsets.symmetric(vertical: AppPadding.pad12),
-          child: HandlingViewData(
+          child: controller.tasks.isEmpty ?  Center(child: Lottie.asset(ImageAssets.empty),)
+              :
+          HandlingViewData(
               requestStatus: controller.requestStatus, widget: ClipRRect(
             borderRadius: BorderRadius.circular(AppSizeRadius.s16),
             child: ScrollShadow(
