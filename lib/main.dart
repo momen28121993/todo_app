@@ -6,7 +6,6 @@ import 'package:todo_app/core/theme/app_them.dart';
 import 'app_routes.dart';
 import 'core/constant/app_dimension.dart';
 import 'core/services/services.dart';
-import 'core/theme/app_them.dart';
 import 'injection.dart';
 
 void main() async{

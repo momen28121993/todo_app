@@ -44,7 +44,8 @@ class TasksListView extends StatelessWidget {
 
                         },
                         whenCheck: (val){
-                          controller.tasks[index].isDone = val!;
+                         bool value = checkDone(!val!);
+                          controller.tasks[index].isDone = value;
                           controller.tasks[index].save();
                             controller.update();
 
@@ -60,4 +61,10 @@ class TasksListView extends StatelessWidget {
       },
     );
   }
+}
+
+// ================== functions ==============
+bool checkDone( bool val) {
+  bool value = !val;
+  return value;
 }

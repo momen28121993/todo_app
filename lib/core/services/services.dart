@@ -22,7 +22,7 @@ class MyServices extends GetxService {
   
 }
 initialServices () async{
-  await  Get.putAsync(() => MyServices().init());
+ // await  Get.putAsync(() => MyServices().init());
   await Hive.initFlutter() ;
   Hive.registerAdapter(TaskModelAdapter());
   await Hive.openBox<TaskModel>(AppStrings.task);
