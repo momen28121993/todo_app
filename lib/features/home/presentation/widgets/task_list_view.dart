@@ -39,12 +39,15 @@ class TasksListView extends StatelessWidget {
                         onTapCard: (){},
                         onTapDelete: (){
                           controller.tasks[index].delete();
-                          controller.fetchAllTasks();
+                          controller.tasks.removeAt(index);
+                          controller.update();
+
                         },
                         whenCheck: (val){
                           controller.tasks[index].isDone = val!;
                           controller.tasks[index].save();
-                          controller.fetchAllTasks();
+                            controller.update();
+
                         },
                       ),
                     ),
